@@ -1,8 +1,8 @@
 # Quality Evaluation System for Speech Synthesis
 
-This is a evaluation web aplication developed in flask for speech synthesis.
+This is a web application developed in flask for quality evaluation of synthesized speech.
 
-Users can give a score, given a synthesized speech and its respective text, the results are saved
+Users can give a score, given a synthesized speech and its respective text. The results are saved
 in a csv file.
 
 ## 1. Dependencies
