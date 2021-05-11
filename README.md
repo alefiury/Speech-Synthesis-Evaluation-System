@@ -1,9 +1,6 @@
 # Quality Evaluation System for Speech Synthesis
 
-This is a web application developed in flask for quality evaluation of synthesized speech.
-
-Users can give a score, given a synthesized speech and its respective text. The results are saved
-in a csv file.
+This is a web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese.
 
 ## 1. Dependencies
 
@@ -31,7 +28,7 @@ To migrate your database, run:
 
 ```
 $ flask db init
-$ flask db migrate -m "write_the_name_of_your_migration"
+$ flask db migrate -m "name_of_your_migration"
 ```
 
 ## 2. Run
