@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-center h3">Sign in</div>
+        <div class="card-body">
+          <form method="POST">
+            {{ form.hidden_tag() }}
+            <fieldset class="mb-3 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-envelope-fill"></i> </span>
+              </div>
+              {{ form.email(type="email", class="form-control") }}
+            </fieldset>
+
+            <fieldset class="mb-3 form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-shield-lock-fill"></i> </span>
+              </div>
+              {{ form.password(class="form-control") }}
+            </fieldset>
+
+            <fieldset class="mb-3 form-group">
+              {{form.remember_me(class="checkbox")}} {{ form.remember_me.label() }}
+            </fieldset>
+
+            <fieldset class="mb-2 d-grid gap-2 col-6 mx-auto form-group">
+              {{ form.submit(class="btn btn-outline-dark btn-block")}}
+            </fieldset>
+          </form>
+        </div>
+        <p class="text-center">Não tem uma conta? <a href="{{url_for('auth.signup')}}" class="link-primary">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
