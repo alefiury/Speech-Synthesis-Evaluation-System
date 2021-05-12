@@ -4,7 +4,7 @@ This is a web application developed in flask for quality evaluation of synthesiz
 
 ## 1. Dependencies
 
-To install the necessary dependencies via pip, run:
+To install the necessary dependencies via pip:
 
 ```
 $ sudo pip install -r requeriments
@@ -12,7 +12,7 @@ $ sudo pip install -r requeriments
 
 ## Database
 
-To create the database, simply run:
+To create the database:
 
 ```
 $ export FLASK_APP=main.py
@@ -24,7 +24,7 @@ $ exit()
 
 ## Migration
 
-To migrate your database, run:
+To migrate your database:
 
 ```
 $ flask db init
