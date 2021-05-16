@@ -3,8 +3,8 @@
 {% block content %}
   <div class="row justify-content-md-center">
     <div class="col-md-4">
-      <div class="card">
-        <div class="card-header text-center h3">Sign in</div>
+      <div class="shadow card card-form">
+        <div class="card-header text-center h3">Log In</div>
         <div class="card-body">
           <form method="POST">
             {{ form.hidden_tag() }}
@@ -31,7 +31,7 @@
             </fieldset>
           </form>
         </div>
-        <p class="text-center">Não tem uma conta? <a href="{{url_for('auth.signup')}}" class="link-primary">Sign up</a></p>
+        <p class="text-center">Não tem uma conta? <a href="{{url_for('auth.signup')}}" class="link-primary">Cadastre-se</a></p>
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ def login():
             # POST/REDIRECT/GET Pattern - Prevent unwanted redirects
             next = request.args.get('next')
             if next is None or not next.startswith('/'):
-                next = url_for('main.hello')
+                next = url_for('main.sound_test')
             return redirect(next)
         flash('Email ou senha incorreta.', 'warning')
     return render_template('auth/login.html', form=form)
@@ -33,7 +33,8 @@ def signup():
                     name=form.name.data,
                     password=form.password.data,
                     role=roles['user'],
-                    last_audio=None)
+                    last_audio=None,
+                    seed=None)
         db.session.add(user)
         db.session.commit()
         flash(form.email.data + ' cadastrado com sucesso!', 'success')

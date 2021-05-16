@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block content %}
+  <div class="card text-center">
+    <div class="card-header h3">
+      Teste seu fone
+    </div>
+    <div class="card-body">
+      <div class="mb-3 text-center">
+        <audio controls>
+          <source src="/play/{{ 'sound_test/sound_test.wav' }}" type="audio/wav">
+        </audio>
+      </div>
+
+      <div class="p-3 text-center">
+        <a href="{{ url_for('main.introduction') }}" class="btn btn-outline-primary">Avançar</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

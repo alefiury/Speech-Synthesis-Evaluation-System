@@ -1,33 +1,14 @@
 {% extends "base.html"%}
 {% block content %}
-  {%if idx < audio_limit and idx < max_lenth%}
-    <div class="mb-3 accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Instruções
-          </button>
-        </h2>
-
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati voluptatibus dignissimos, eos neque facilis, necessitatibus ad ducimus vero, optio illo velit totam quis quas. Nihil blanditiis sed magni doloribus consequatur.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card text-center">
+  {%if session['idx'] < session['max_lenth']%}
+    <div class="shadow card text-center">
       <div class="card-header h3">
-        Exemplo {{idx + 1}}
+        Exemplo {{session['idx'] + 1}}
       </div>
       <div class="card-body">
         <div class="mb-3 text-center">
-          <p><strong>Texto:</strong> {{paths[idx][1]}}</p>
-        </div>
-        <div class="mb-3 text-center">
           <audio controls>
-            <source src="/play/{{ os.path.basename(paths[idx][0]) }}" type="audio/wav">
+            <source src="/play/{{ session['audio_filepaths'][session['idx']] }}" type="audio/wav">
           </audio>
         </div>
         <form method="POST">
@@ -56,4 +37,14 @@
       </div>
     </div>
   {%endif%}
+
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Instruções</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Antes de começar a avaliar, certifique-se que leu as instruções.
+    </div>
+  </div>
 {% endblock %}

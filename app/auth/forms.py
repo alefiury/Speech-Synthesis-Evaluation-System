@@ -29,7 +29,7 @@ class CadastrarUsuarioForm(FlaskForm):
 
     terms = BooleanField('', validators=[DataRequired()])
 
-    submit = SubmitField('Sign up')
+    submit = SubmitField('Cadastrar')
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():
@@ -41,8 +41,8 @@ class CadastrarUsuarioForm(FlaskForm):
 
 
 class AlterarSenhaForm(FlaskForm):
-    current_password = PasswordField('Senha:',
-                                     render_kw={"placeholder": "Senha"},
+    current_password = PasswordField('Senha Atual:',
+                                     render_kw={"placeholder": "Senha Atual"},
                                      validators=[DataRequired()])
     password = PasswordField('Nova Senha:',
                              render_kw={"placeholder": "Nova Senha"},

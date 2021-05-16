@@ -1,0 +1,87 @@
+{% extends "base.html"%}
+{% block content %}
+  <div class="container">
+    <div class="shadow card">
+      <!-- <div class="card-header h2 text-center">Instruções</div> -->
+      <div class="card-body">
+        <p class="mb-3 h1">Instruções</p>
+        <p>O <strong>Opinion Score (MOS)</strong> é a mais conhecida medida da qualidade de voz.
+          É um método subjetivo de teste de qualidade. O Objetivo é avaliar a qualidade do
+          áudio seguindo os critérios de compreensão do que está sendo falado e a
+          presença de ruídos, que irritam/dificultam a compreensão da fala.</p>
+        <p>
+          Você como avaliador deve dar uma nota para cada áudio, as notas variam
+          de 1 a 5, como pode ser observado na tabela abaixo:
+        </p>
+
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-6">
+              <table class="shadow-sm table table-bordered bg-white">
+                <thead>
+                  <tr>
+                    <th style="text-align:center">Avaliação</th>
+                    <th style="text-align:center">Qualidade</th>
+                    <th>Distorção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:center">5</td>
+                    <td>Excelente</td>
+                    <td>Imperceptível</td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align:center">4</td>
+                    <td>Boa</td>
+                    <td>Apenas perceptível, mas não irritante</td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align:center">3</td>
+                    <td>Razoável</td>
+                    <td>Perceptível e ligeiramente irritante</td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align:center">2</td>
+                    <td>Pobre</td>
+                    <td>Irritante, mas não inutilizável</td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align:center">1</td>
+                    <td>Ruim</td>
+                    <td>Muito irritante e inutilizável</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Um áudio deve ser avaliado com a nota 1 (Ruim) quando o som possuir um alto
+          nível de distorção, sendo muito irritante e não seja possível compreender o que
+          está sendo falado. Já a nota 2 (Pobre) deve ser dado a um áudio quando a
+          distorção é irritante mas é possível entender o que está sendo falado. A nota 3
+          (Razoável) deve ser atribuída a um áudio quando a distorção do sinal é
+          perceptível e ligeiramente irritante. Já a nota 4 (boa) deve ser atribuída a um
+          áudio onde a distorção é perceptível porém não é irritante. E por fim uma nota 5
+          deve ser atribuída para um áudio onde a distorção/ruído é imperceptível.
+        </p>
+        {% if session['idx']==0 or session['idx']== None%}
+          <div class="p-3 text-center">
+            <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Comece a avaliar</a>
+          </div>
+          {%else%}
+            <div class="p-3 text-center">
+              <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Continue a avaliar</a>
+            </div>
+        {%endif%}
+      </div>
+    </div>
+  </div>
+{% endblock %}
