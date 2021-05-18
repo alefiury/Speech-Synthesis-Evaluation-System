@@ -45,7 +45,7 @@ just need to change the path in 'AUDIO_PATH' located in the view file in the app
 
 ## Volume Test
 
-Create the following directory and add the audio that will be used as the volume tester:
+Create the following directory and add the audio with the name 'sound_text.audio_extension' that will be used as the volume tester:
 
 ```
 $ mkdir sound_test
