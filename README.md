@@ -14,7 +14,7 @@ $ sudo pip install -r requeriments
 
 ## Database
 
-To create the database:
+To create and set the database:
 
 ```
 $ export FLASK_APP=main.py
@@ -24,13 +24,12 @@ $ flask shell
 >>> exit()
 ```
 
-## Migration
+## Secret key
 
-To migrate your database:
+Set your own secret key in the config.py file. As an example, you can use the result from the following script:
 
 ```
-$ flask db init
-$ flask db migrate -m "name_of_your_migration"
+$ python -c 'import os; print(os.urandom(24))'
 ```
 
 ## Audios for Evaluation
@@ -41,12 +40,12 @@ Create the following directory and add the audios to be evaluated in there:
 $ mkdir audios
 ```
 
-Or you can create any directory outside of 'app', and add the audios there. In this case you
-just need to change the path in 'AUDIO_PATH' in the config file.
+Or you can create any directory outside of 'app' directory and add the audios there. In this case, you
+just need to change the path in 'AUDIO_PATH' located in the view file in the app/main directory.
 
-## Audio for Sound Test
+## Volume Test
 
-Create the following directory and add the audio that will be used as the sound tester:
+Create the following directory and add the audio that will be used as the volume tester:
 
 ```
 $ mkdir sound_test
@@ -58,6 +57,15 @@ To run the application, run the following bash command:
 
 ```
 $ bash start_app.sh
+```
+
+## Migration
+
+In order to migrate your database:
+
+```
+$ flask db init
+$ flask db migrate -m "name_of_your_migration"
 ```
 
 ## Author

@@ -1,10 +1,9 @@
 {% extends "base.html"%}
 {% block content %}
-  <div class="card text-center">
-    <div class="card-header h3">
-      Teste seu fone
-    </div>
+  <div class="shadow card">
     <div class="card-body">
+      <p class="mb-3 h1">Volume</p>
+      <p>Reproduza o áudio abaixo para testar o seu volume. Avance quando estiver satisfeito.</p>
       <div class="mb-3 text-center">
         <audio controls>
           <source src="/play/{{ 'sound_test/sound_test.wav' }}" type="audio/wav">

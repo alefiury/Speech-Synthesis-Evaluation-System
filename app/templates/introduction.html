@@ -2,7 +2,6 @@
 {% block content %}
   <div class="container">
     <div class="shadow card">
-      <!-- <div class="card-header h2 text-center">Instruções</div> -->
       <div class="card-body">
         <p class="mb-3 h1">Instruções</p>
         <p>O <strong>Opinion Score (MOS)</strong> é a mais conhecida medida da qualidade de voz.
@@ -72,15 +71,9 @@
           áudio onde a distorção é perceptível porém não é irritante. E por fim uma nota 5
           deve ser atribuída para um áudio onde a distorção/ruído é imperceptível.
         </p>
-        {% if session['idx']==0 or session['idx']== None%}
-          <div class="p-3 text-center">
-            <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Comece a avaliar</a>
-          </div>
-          {%else%}
-            <div class="p-3 text-center">
-              <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Continue a avaliar</a>
-            </div>
-        {%endif%}
+        <div class="p-3 text-center">
+          <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Comece a avaliar</a>
+        </div>
       </div>
     </div>
   </div>

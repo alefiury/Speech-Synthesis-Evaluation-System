@@ -6,11 +6,11 @@ from . import main
 from .forms import VoteForm
 from .. import db
 
-from io import BytesIO
-import random
-from datetime import datetime
 import os
 import glob
+import random
+from io import BytesIO
+from datetime import datetime
 from pathlib import Path
 
 # Quantity of audios to be evaluated
