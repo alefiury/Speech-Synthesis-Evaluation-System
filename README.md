@@ -65,7 +65,7 @@ In order to migrate your database:
 
 ```
 $ flask db init
-$ flask db migrate -m "name_of_your_migration"
+$ flask db migrate -m "your_migration"
 ```
 
 ## Author
