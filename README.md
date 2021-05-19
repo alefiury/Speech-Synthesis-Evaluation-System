@@ -12,7 +12,7 @@ To install the necessary dependencies via pip:
 $ sudo pip install -r requeriments
 ```
 
-## Database
+## 2. Database
 
 To create and set the database:
 
@@ -24,7 +24,7 @@ $ flask shell
 >>> exit()
 ```
 
-## Secret key
+## 3. Secret key
 
 Set your own secret key in the config.py file. As an example, you can use the result from the following script:
 
@@ -32,7 +32,7 @@ Set your own secret key in the config.py file. As an example, you can use the re
 $ python -c 'import os; print(os.urandom(24))'
 ```
 
-## Audios for Evaluation
+## 4. Audios for Evaluation
 
 Create the following directory and add the audios to be evaluated in there:
 
@@ -43,7 +43,7 @@ $ mkdir audios
 Or you can create any directory outside of 'app' directory and add the audios there. In this case, you
 just need to change the path in 'AUDIO_PATH' located in the view file in the app/main directory.
 
-## Volume Test
+## 5. Volume Test
 
 Create the following directory and add the audio with the name 'sound_text.audio_extension' that will be used as the volume tester:
 
@@ -51,7 +51,7 @@ Create the following directory and add the audio with the name 'sound_text.audio
 $ mkdir sound_test
 ```
 
-## 2. Execute
+## 6. Execute
 
 To run the application, run the following bash command:
 
