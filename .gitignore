@@ -1,0 +1,14 @@
+# C extensions
+*.so
+
+# Para arquivos Java compilados
+*.class
+
+# audios/
+
+# sound_test/
+
+# Packages
+lib
+lib64
+__pycache__
