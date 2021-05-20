@@ -15,7 +15,7 @@ class User(UserMixin, db.Model):
     name = db.Column(db.String(1000))
     role = db.Column(db.Integer)
     last_audio = db.Column(db.Integer)
-    seed = db.Column(db.Integer)
+    seed = db.Column(db.String(100))
 
     @property
     def password(self):
