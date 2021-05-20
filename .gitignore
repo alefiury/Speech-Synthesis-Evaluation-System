@@ -1,14 +1,7 @@
-# C extensions
-*.so
+venv/
+.env
 
-# Para arquivos Java compilados
-*.class
+*.pyc
+__pycache__/
 
-# audios/
-
-# sound_test/
-
-# Packages
-lib
-lib64
-__pycache__
+instance/
