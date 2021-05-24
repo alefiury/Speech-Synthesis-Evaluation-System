@@ -5,6 +5,7 @@ class Config:
   SECRET_KEY = os.environ.get('SECRET_KEY')
   FLASK_ADMIN = os.environ.get("FLASKADMIN")
   SQLALCHEMY_TRACK_MODIFICATIONS = False
+  SSL_REDIRECT = False
 
   AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
   AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
@@ -39,9 +40,20 @@ class ProductionConfig(Config):
     else:
         SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 
+class HerokuConfig(ProductionConfig):
+    SSL_REDIRECT = True if os.environ.get('DYNO') else False
+
+    @classmethod
+    def init_app(cls, app):
+        ProductionConfig.init_app(app)
+
+        # handle reverse proxy server headers
+        from werkzeug.contrib.fixers import ProxyFix
+        app.wsgi_app = ProxyFix(app.wsgi_app)
+
 config = {
     'development': DevelopmentConfig,
     'production': ProductionConfig,
-
+    'heroku': HerokuConfig,
     'default': DevelopmentConfig
 }
