@@ -12,9 +12,37 @@ To install the necessary dependencies via pip:
 $ sudo pip install -r requeriments
 ```
 
-## 2. Database
+## 2. Set Environment Variables
 
-To create and set the database:
+To sucessfully run the application you need to set the environment variables that are used to handle encryption and data storage.
+
+This variables can be seen and set in the config file.
+
+### 2.2 Score Database
+
+The scores given by the users are saved in a RealTime Database in the Firebase platform. First, is necessary that you create an account on the Firebase platform, add a new app project, get the information related to the project and set the enviroment variables that are related with the RealTime Database.
+
+More information can be found [here](https://firebase.google.com).
+
+### 2.3 Audio Database
+
+The audios that will be evaluated need to be stored in a AWS S3 Storage bucket. Set the environment variables related with the S3 storage accordingly.
+
+### 2.4 Volume Test
+
+The audio used as a volume tester also need to be stored in a AWS S3 Storage bucket, different from the evaluation data and set the environment variables.
+
+## 3. Secret key
+
+Choose your own secret key. As an example, you can use the result from the following script:
+
+```
+$ python -c 'import os; print(os.urandom(24))'
+```
+
+## 4. User Information Database
+
+In order to create the database necessary to save the information of your users, run the following bash command:
 
 ```
 $ export FLASK_APP=main.py
@@ -24,34 +52,7 @@ $ flask shell
 >>> exit()
 ```
 
-## 3. Secret key
-
-Set your own secret key in the config.py file. As an example, you can use the result from the following script:
-
-```
-$ python -c 'import os; print(os.urandom(24))'
-```
-
-## 4. Audios for Evaluation
-
-Create the following directory and add the audios to be evaluated in there:
-
-```
-$ mkdir audios
-```
-
-Or you can create any directory outside of 'app' directory and add the audios there. In this case, you
-just need to change the path in 'AUDIO_PATH' located in the view file in the app/main directory.
-
-## 5. Volume Test
-
-Create the following directory and add the audio with the name 'sound_text.audio_extension' that will be used as the volume tester:
-
-```
-$ mkdir sound_test
-```
-
-## 6. Execute
+## 5. Execute
 
 To run the application, run the following bash command:
 
