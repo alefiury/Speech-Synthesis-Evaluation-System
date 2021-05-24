@@ -23,7 +23,7 @@ from .. import (bucket, s3_resource,
 @main.route('/sound_test', methods=['GET', 'POST'])
 @login_required
 def sound_test():
-  return render_template('sound_test.html')
+  return render_template('sound_test.html', s3_client=s3_client, os=os)
 
 @main.route('/introduction', methods=['GET', 'POST'])
 @login_required

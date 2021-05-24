@@ -10,6 +10,8 @@ class Config:
   AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
   AWS_REGION_NAME = os.environ.get("AWS_REGION_NAME")
   S3_BUCKET = os.environ.get("S3_BUCKET")
+  S3_BUCKET_SOUND_TEST = os.environ.get("S3_BUCKET_SOUND_TEST")
+  S3_KEY_SOUND_TEST = os.environ.get("S3_KEY_SOUND_TEST")
 
 
   FIREBASE_CONFIG = {
