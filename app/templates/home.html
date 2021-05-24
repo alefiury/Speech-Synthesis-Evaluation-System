@@ -1,14 +1,14 @@
 {% extends "base.html"%}
 {% block content %}
-  {%if session['idx'] < session['max_lenth']%}
+  {%if session['idx'] < max_lenth%}
     <div class="shadow card text-center">
       <div class="card-header h3">
         Exemplo {{session['idx'] + 1}}
       </div>
       <div class="card-body">
         <div class="mb-3 text-center">
-          <audio controls>
-            <source src="/play/{{ session['audio_filepaths'][session['idx']] }}" type="audio/wav">
+          <audio controls="controls" preload="auto" id="audio_player">
+            <source src="{{s3_client.generate_presigned_url('get_object', Params={'Bucket': audio_filepaths[session['idx']].bucket_name, 'Key': audio_filepaths[session['idx']].key}, ExpiresIn=3600)}}">
           </audio>
         </div>
         <form method="POST">
