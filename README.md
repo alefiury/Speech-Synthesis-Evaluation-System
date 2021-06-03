@@ -77,6 +77,12 @@ $ flask db init
 $ flask db migrate -m "your_migration"
 ```
 
+## Deployment
+
+The application is already prepared to be deployed to Heroku.
+
+For more information on deployment using Git can be found [here](https://devcenter.heroku.com/articles/git).
+
 ## Author
 
 - Alef Iury S. Ferreira
