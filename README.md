@@ -4,7 +4,7 @@ This is a web application developed in flask for quality evaluation of synthesiz
 
 The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
 
-## How the Application Works
+# How the Application Works
 
 Every participant can choose beetween 5 possible scores for each audio sample, every audio samples provided will be shown one after the other, and
 when all samples are evaluated, the participant will not be able to evaluate more samples.
