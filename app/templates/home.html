@@ -1,50 +1,96 @@
 {% extends "base.html"%}
 {% block content %}
   {%if session['idx'] < max_lenth%}
-    <div class="shadow card text-center">
-      <div class="card-header h3">
-        Exemplo {{session['idx'] + 1}}
-      </div>
-      <div class="card-body">
-        <div class="mb-3 text-center">
-          <audio controls="controls" preload="auto" id="audio_player">
-            <source src="{{s3_client.generate_presigned_url('get_object', Params={'Bucket': audio_filepaths[session['idx']].bucket_name, 'Key': audio_filepaths[session['idx']].key}, ExpiresIn=3600)}}">
-          </audio>
+    <!-- Score Table -->
+    <div class="container">
+      <div class="mb-3 row justify-content-md-center">
+        <div class="col-md-6">
+          <table class="shadow-sm table table-bordered bg-white">
+            <thead>
+              <tr>
+                <th style="text-align:center">Avaliação</th>
+                <th style="text-align:center">Qualidade</th>
+                <th>Distorção</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:center">5</td>
+                <td>Excelente</td>
+                <td>Imperceptível</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:center">4</td>
+                <td>Boa</td>
+                <td>Apenas perceptível, mas não irritante</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:center">3</td>
+                <td>Razoável</td>
+                <td>Perceptível e ligeiramente irritante</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:center">2</td>
+                <td>Pobre</td>
+                <td>Irritante, mas não inutilizável</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:center">1</td>
+                <td>Ruim</td>
+                <td>Muito irritante e inutilizável</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <form method="POST">
-          {{ form.hidden_tag() }}
-          <fieldset class="mb-3 form-group form-check-inline">
-            {% for score in form.score %}
-              <div class="form-check form-check-inline">
-                {{ score(class="form-check-input", type="radio") }}
-                {{ score.label(class="form-check-label") }}
-              </div>
-            {% endfor %}
-          </fieldset>
-          <fieldset class="mb-3 form-group">
-            {{ form.submit(class="btn btn-outline-primary btn-md") }}
-          </fieldset>
-        </form>
+      </div>
+    </div>
+    <!-- Audio -->
+    <div class="row justify-content-md-center">
+      <div class="col-md-6">
+        <div class="shadow-sm card">
+          <div class="card-header h3 text-center">
+            Amostra {{session['idx'] + 1}}
+          </div>
+          <div class="card-body">
+            <!-- Audio Player -->
+            <div class="my-3 text-center">
+              <audio controls="controls" preload="auto" id="audio_player">
+                <source src="{{s3_client.generate_presigned_url('get_object', Params={'Bucket': audio_filepaths[session['idx']].bucket_name, 'Key': audio_filepaths[session['idx']].key}, ExpiresIn=3600)}}">
+              </audio>
+            </div>
+            <!-- Audio Score -->
+            <div class="text-center">
+              <form method="POST">
+                {{ form.hidden_tag() }}
+                <fieldset class="mb-3 form-group form-check-inline">
+                  {% for score in form.score %}
+                    <div class="form-check form-check-inline">
+                      {{ score(class="form-check-input", type="radio") }}
+                      {{ score.label(class="form-check-label") }}
+                    </div>
+                  {% endfor %}
+                </fieldset>
+                <fieldset class="mb-3 form-group">
+                  {{ form.submit(class="btn btn-outline-primary btn-md") }}
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     {%else%}
-    <div class="card">
-      <div class="card-body">
+    <div class="card shadow-sm ">
+      <div class="card-body text-center">
         <div class="justify-content-center">
-          Não há mais exemplos a serem avaliados.
+          Não há mais amostras a serem avaliadas. Agradecemos a sua participação!
         </div>
       </div>
     </div>
   {%endif%}
-
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <strong class="me-auto">Instruções</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      Antes de começar a avaliar, certifique-se que leu as instruções.
-    </div>
-  </div>
 {% endblock %}

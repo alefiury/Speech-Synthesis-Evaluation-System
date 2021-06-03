@@ -29,8 +29,8 @@ s3_client = client('s3',
 
 bucket = s3_resource.Bucket(os.environ.get("S3_BUCKET"))
 
-audio_filepaths =  list(bucket.objects.all())
-max_lenth = len(audio_filepaths)
+audio_filepaths_orig =  list(bucket.objects.all())
+max_lenth = len(audio_filepaths_orig)
 
 # Initialize firebase application and set the realtime database
 firebase = initialize_app(Config.FIREBASE_CONFIG)

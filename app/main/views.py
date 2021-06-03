@@ -18,7 +18,7 @@ import pyrebase
 from config import Config
 from .. import (bucket, s3_resource,
                 s3_client, firebase_db,
-                audio_filepaths, max_lenth, db)
+                audio_filepaths_orig, max_lenth, db)
 
 @main.route('/sound_test', methods=['GET', 'POST'])
 @login_required
@@ -33,6 +33,7 @@ def introduction():
 @main.route('/', methods=['GET', 'POST'])
 @login_required
 def hello():
+  audio_filepaths = audio_filepaths_orig[:]
   form = VoteForm()
   # First access to the application
   if current_user.seed == None and current_user.last_audio == None:

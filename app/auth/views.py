@@ -19,7 +19,7 @@ def login():
             next = request.args.get('next')
             if next is None or not next.startswith('/'):
                 next = url_for('main.sound_test')
-            return redirect(next)
+            return redirect(url_for('main.sound_test'))
         flash('Email ou senha incorreta.', 'warning')
     return render_template('auth/login.html', form=form)
 
