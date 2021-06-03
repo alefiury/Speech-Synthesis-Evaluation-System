@@ -28,7 +28,7 @@ This variables can be seen and set in the config file.
 
 ### 2.2 Score Database
 
-The scores given by the users are saved in a RealTime Database in the Firebase platform. First, is necessary that you create an account on the Firebase platform, add a new app project, get the information related to the project and set the enviroment variables that are related with the RealTime Database.
+The scores given by the users are saved in a RealTime Database on the Firebase platform. Is necessary that you create an account, add a new app project, get the information related to the project and set the enviroment variables that are related with the RealTime Database.
 
 More information can be found [here](https://firebase.google.com).
 
@@ -38,7 +38,7 @@ The audios that will be evaluated need to be stored in a AWS S3 Storage bucket. 
 
 ### 2.4 Volume Test
 
-The audio used as a volume tester also need to be stored in a AWS S3 Storage bucket, different from the evaluation data and set the environment variables.
+The audio used as a volume tester also need to be stored in a AWS S3 Storage bucket, in a different bucket from the evaluation data. Set the environment variables.
 
 ## 3. Secret key
 
