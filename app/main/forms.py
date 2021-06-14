@@ -4,4 +4,7 @@ from wtforms import RadioField, SubmitField
 
 class VoteForm(FlaskForm):
   score = RadioField('Avaliação', choices = [1, 2, 3, 4, 5],  validators=[DataRequired()])
-  submit = SubmitField('Próximo')
+  submit_next = SubmitField('Próximo')
+
+class PageForm(FlaskForm):
+  submit_prev = SubmitField('Anterior')

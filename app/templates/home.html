@@ -53,7 +53,7 @@
       <div class="col-md-6">
         <div class="shadow-sm card">
           <div class="card-header h3 text-center">
-            Amostra {{session['idx'] + 1}}
+            Amostra {{session['idx'] + 1}} de {{max_lenth}}
           </div>
           <div class="card-body">
             <!-- Audio Player -->
@@ -65,9 +65,9 @@
             <!-- Audio Score -->
             <div class="text-center">
               <form method="POST">
-                {{ form.hidden_tag() }}
+                {{ vote_form.hidden_tag() }}
                 <fieldset class="mb-3 form-group form-check-inline">
-                  {% for score in form.score %}
+                  {% for score in vote_form.score %}
                     <div class="form-check form-check-inline">
                       {{ score(class="form-check-input", type="radio") }}
                       {{ score.label(class="form-check-label") }}
@@ -75,7 +75,12 @@
                   {% endfor %}
                 </fieldset>
                 <fieldset class="mb-3 form-group">
-                  {{ form.submit(class="btn btn-outline-primary btn-md") }}
+                  <!-- Previous button -->
+                  {%if session['idx'] > 0%}
+                    {{ page_form.submit_prev(class="btn btn-outline-primary btn-md") }}
+                  {%endif%}
+                  <!-- Next button -->
+                  {{ vote_form.submit_next(class="btn btn-outline-primary btn-md") }}
                 </fieldset>
               </form>
             </div>
