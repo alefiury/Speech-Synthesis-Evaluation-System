@@ -6,11 +6,14 @@ The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor
 
 # How the Application Works
 
-Every participant can choose beetween 5 possible scores for each audio sample, every audio samples provided will be shown one after the other, and
-when all samples are evaluated, the participant will not be able to evaluate more samples.
+Every participant can choose beetween 5 possible values for each audio sample.
+
+Every audio sample provided will be shown one by one.
+
+When all samples are evaluated, the participant will not be able to evaluate more samples.
 
 To minimize bias during the evaluation, the audio samples are shown in a random order for each participant, and even after a logout,
-the participants will be able to continue to evaluate the samples from where they stopped, continuing in the same order that were previously shown.
+the participants will be able to continue to evaluate the samples from where they stopped.
 
 ## 1. Dependencies
 
@@ -24,7 +27,7 @@ $ sudo pip install -r requeriments
 
 To sucessfully run the application you need to set the environment variables that are used to handle encryption and data storage.
 
-This variables can be seen and set in the config file.
+These variables can be seen and set in the config file.
 
 ### 2.2 Score Database
 
@@ -38,11 +41,11 @@ The audios that will be evaluated need to be stored in a AWS S3 Storage bucket. 
 
 ### 2.4 Volume Test
 
-The audio used as a volume tester also need to be stored in a AWS S3 Storage bucket, in a different bucket from the evaluation data. Set the environment variables.
+The audio used as a volume tester also need to be stored in a AWS S3 Storage bucket, in a different bucket from the evaluation data. Set the environment variables accordingly.
 
 ## 3. Secret key
 
-Choose your own secret key. As an example, you can use the result from the following script:
+Choose your own secret key. As an example, you could use the result from the following script:
 
 ```
 $ python -c 'import os; print(os.urandom(24))'
