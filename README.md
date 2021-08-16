@@ -1,6 +1,6 @@
 # Quality Evaluation System for Speech Synthesis
 
-This is a web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
+A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
 
 The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
 
