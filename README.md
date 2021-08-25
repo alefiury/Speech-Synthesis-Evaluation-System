@@ -6,7 +6,7 @@ The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor
 
 # How the Application Works
 
-Every participant can choose beetween 5 possible values for each audio sample.
+Every participant can choose between 5 possible values for each audio sample.
 
 Every audio sample provided will be shown one by one.
 
