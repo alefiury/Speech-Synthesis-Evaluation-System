@@ -18,9 +18,9 @@
 
 A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
 
-The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
-
 # How the Application Works
+
+The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
 
 Every participant can choose between 5 possible values for each audio sample.
 
