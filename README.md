@@ -10,7 +10,7 @@
 
 - [How the Application Works](#How-the-Application-Works)
 - [Migration](#Migration)
-- [Dependencies](##Dependencies)
+- [Deployment](#Deployment)
 - [Contact](#Contact)
 
 A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
