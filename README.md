@@ -8,10 +8,13 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
+- [Introduction](#Introduction)
 - [How the Application Works](#How-the-Application-Works)
 - [Migration](#Migration)
 - [Deployment](#Deployment)
 - [Contact](#Contact)
+
+# Introduction
 
 A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
 
