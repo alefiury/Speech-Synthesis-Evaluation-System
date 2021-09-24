@@ -8,6 +8,11 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
+- [How the Application Works](#How-the-Application-Works)
+- [Migration](#Migration)
+- [Dependencies](##Dependencies)
+- [Contact](#Contact)
+
 A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
 
 The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
