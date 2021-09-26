@@ -22,8 +22,6 @@ A web application developed in flask for quality evaluation of synthesized speec
 
 The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
 
-Every participant can choose between 5 possible values for each audio sample.
-
 Every audio sample provided will be shown one by one.
 
 When all samples are evaluated, the participant will not be able to evaluate more samples.
