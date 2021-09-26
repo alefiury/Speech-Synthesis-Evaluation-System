@@ -87,7 +87,7 @@ $ bash start_app.sh
 
 ## Migration
 
-In order to migrate your database:
+In order to migrate your database, run the following bash command:
 
 ```
 $ flask db init
@@ -102,7 +102,7 @@ More information on deployment using Git can be found [here](https://devcenter.h
 
 ## Author
 
-- Alef Iury S. Ferreira
+- Alef Iury Siqueira Ferreira
 
 ## Contact
 
