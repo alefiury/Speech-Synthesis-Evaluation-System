@@ -61,6 +61,8 @@ def hello():
   # Shuffle audio file paths
   random.Random(session['seed']).shuffle(audio_filepaths)
 
+  audio_filepaths = audio_filepaths[:int(Config.MAX_SAMPLES)]
+
   # Message after the evaluation of all samples
   if session['idx'] >= max_lenth:
     flash('Votação concluida com sucesso', 'success')
@@ -85,4 +87,4 @@ def hello():
     db.session.commit()
     return redirect(url_for('main.hello'))
 
-  return render_template('home.html', vote_form=vote_form, page_form=page_form, session=session, max_lenth=max_lenth, audio_filepaths=audio_filepaths, s3_client=s3_client)
+  return render_template('home.html', vote_form=vote_form, page_form=page_form, session=session, max_lenth=len(audio_filepaths), audio_filepaths=audio_filepaths, s3_client=s3_client)

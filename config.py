@@ -13,6 +13,7 @@ class Config:
   S3_BUCKET = os.environ.get("S3_BUCKET")
   S3_BUCKET_SOUND_TEST = os.environ.get("S3_BUCKET_SOUND_TEST")
   S3_KEY_SOUND_TEST = os.environ.get("S3_KEY_SOUND_TEST")
+  MAX_SAMPLES = os.environ.get("MAX_SAMPLES")
 
 
   FIREBASE_CONFIG = {
