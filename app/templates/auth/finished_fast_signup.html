@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <div class="shadow card card-form">
+        <div class="card-header text-center h3">Seu Cadastro Rápido</div>
+        <div class="card-body">
+          <p>Usuário: {{rand_user}}</p>
+          <p>Email: {{rand_email}}</p>
+          <p>Senha: {{rand_password}}</p>
+        </div>
+        <p class="text-center">Já tem uma conta? <a href="{{url_for('auth.login')}}" class="link-primary">Log In</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

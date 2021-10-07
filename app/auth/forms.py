@@ -39,6 +39,10 @@ class CadastrarUsuarioForm(FlaskForm):
         if User.query.filter_by(name=field.data).first():
             raise ValidationError('O nome de usuário já existe.')
 
+class CadastroRapido(FlaskForm):
+    terms = BooleanField('', validators=[DataRequired()])
+
+    submit = SubmitField('Cadastrar')
 
 class AlterarSenhaForm(FlaskForm):
     current_password = PasswordField('Senha Atual:',

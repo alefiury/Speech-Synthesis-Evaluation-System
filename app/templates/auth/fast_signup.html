@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <div class="shadow card card-form">
+        <div class="card-header text-center h3">Cadastro Rápido</div>
+        <div class="card-body">
+          <form method="POST">
+            {{ form.hidden_tag() }}
+
+            <fieldset class="mb-3 form-group">
+              {{form.terms()}}
+
+              Eu concordo com os <a href="{{url_for('auth.terms')}}" target="_blank" class="link-primary">Termos e Condições</a>
+            </fieldset>
+
+            <fieldset class="mb-2 d-grid gap-2 col-6 mx-auto form-group">
+              {{ form.submit(class="btn btn-outline-dark btn-block") }}
+            </fieldset>
+          </form>
+        </div>
+        <p class="text-center">Já tem uma conta? <a href="{{url_for('auth.login')}}" class="link-primary">Log In</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

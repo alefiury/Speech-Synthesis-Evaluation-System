@@ -1,10 +1,12 @@
+import uuid
+
 from flask import render_template, redirect, url_for, flash, request, session
 from flask_login import login_user, logout_user, login_required, current_user
 from ..models import User, roles
 from . import auth
 from .. import db
-from .forms import LoginForm, CadastrarUsuarioForm, AlterarSenhaForm
-
+from .forms import LoginForm, CadastrarUsuarioForm, AlterarSenhaForm, CadastroRapido
+from random_username.generate import generate_username
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -42,6 +44,31 @@ def signup():
     users = User.query.all()
     return render_template('auth/signup.html', form=form, users=users)
 
+@auth.route('/fast_signup', methods=['GET', 'POST'])
+def fast_signup():
+    form = CadastroRapido()
+
+    rand_name = generate_username(1)[0]
+    rand_email = (rand_name+'@email.com').lower()
+    rand_password = str(uuid.uuid4())[:8]
+
+    if form.validate_on_submit():
+        user = User(email=rand_email,
+                    name=rand_name,
+                    password=rand_password,
+                    role=roles['user'],
+                    last_audio=None,
+                    seed=None)
+        db.session.add(user)
+        db.session.commit()
+        flash('Cadastrado criado com sucesso!', 'success')
+        return redirect(url_for('auth.finished_fast_signup', rand_email=rand_email, rand_password=rand_password, rand_name=rand_name))
+    users = User.query.all()
+    return render_template('auth/fast_signup.html', form=form, users=users)
+
+@auth.route('/finished_fast_signup/<rand_email>/<rand_password>/<rand_name>', methods=['GET', 'POST'])
+def finished_fast_signup(rand_email, rand_password, rand_name):
+    return render_template('auth/finished_fast_signup.html', rand_email=rand_email, rand_password=rand_password, rand_user=rand_name)
 
 @auth.route('/change_password', methods=['GET', 'POST'])
 @login_required
