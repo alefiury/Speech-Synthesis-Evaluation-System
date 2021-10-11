@@ -61,8 +61,18 @@ def fast_signup():
                     seed=None)
         db.session.add(user)
         db.session.commit()
-        flash('Cadastrado criado com sucesso!', 'success')
-        return redirect(url_for('auth.finished_fast_signup', rand_email=rand_email, rand_password=rand_password, rand_name=rand_name))
+
+        flash('Cadastrado rápido criado com sucesso!', 'success')
+        flash(f'Email: {rand_email}', 'info')
+        flash(f'Senha: {rand_password}', 'info')
+
+        # Log in automatically and force remember_me
+        login_user(user, True)
+        # POST/REDIRECT/GET Pattern - Prevent unwanted redirects
+        next = request.args.get('next')
+        if next is None or not next.startswith('/'):
+            next = url_for('main.sound_test')
+        return redirect(url_for('main.sound_test'))
     users = User.query.all()
     return render_template('auth/fast_signup.html', form=form, users=users)
 
@@ -80,7 +90,7 @@ def change_password():
             current_user.password = form.password.data
             db.session.add(current_user)
             db.session.commit()
-            flash('Senha alterada com sucesso!', 'sucess')
+            flash('Senha alterada com sucesso!', 'success')
             return redirect(url_for('main.hello'))
         else:
             flash('Senha atual incorreta', 'warning')

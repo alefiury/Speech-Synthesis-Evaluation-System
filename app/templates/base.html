@@ -66,12 +66,12 @@
           <div class="row justify-content-md-center">
             <div class="col-md-4">
               {% for category, message in messages %}
-                {%if category not in ['error', 'warning', 'success']%}
+                {%if category not in ['error', 'warning', 'success', 'info']%}
                   <div class="alert alert-warning alert-dismissible fade show text-md-center" role="alert">
                   {%else%}
                     <div class="alert alert-{{category}} alert-dismissible fade show text-md-center" role="alert">
                 {%endif%}
-                  {%if category != 'success'%}
+                  {%if category != 'success' and category != 'info'%}
                     <i class="bi bi-exclamation-triangle-fill"></i>
                   {%else%}
                     <i class="bi bi-check-circle-fill"></i>
