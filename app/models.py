@@ -10,12 +10,12 @@ roles = {
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True)
-    password_hash = db.Column(db.String(100))
+    email = db.Column(db.String(1000), unique=True)
+    password_hash = db.Column(db.String(1000))
     name = db.Column(db.String(1000))
     role = db.Column(db.Integer)
     last_audio = db.Column(db.Integer)
-    seed = db.Column(db.String(100))
+    seed = db.Column(db.String(1000))
 
     @property
     def password(self):
