@@ -1,7 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import TextField, PasswordField, SubmitField, BooleanField, ValidationError
-from wtforms.validators import DataRequired, Email, EqualTo
-from wtforms.fields.html5 import EmailField
+from wtforms.fields import StringField, PasswordField, SubmitField, BooleanField, EmailField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
 from ..models import User
 
 class LoginForm(FlaskForm):
@@ -17,7 +16,7 @@ class LoginForm(FlaskForm):
 class CadastrarUsuarioForm(FlaskForm):
     email = EmailField('Email:', validators=[
                        DataRequired(), Email()], render_kw={"placeholder": "Email", "cols": 12})
-    name = TextField('Nome:', validators=[
+    name = StringField('Nome:', validators=[
                      DataRequired()], render_kw={"placeholder": "Nome", "cols": 12})
     password = PasswordField('Senha:', render_kw={"placeholder": "Senha"},
                              validators=[DataRequired(),
