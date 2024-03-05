@@ -23,6 +23,8 @@ class Config:
     "storageBucket": os.environ.get("FIREBASE_STORAGE_BUCKET")
   }
 
+  LANGUAGES = ["pt", "en", "es"]
+
   @staticmethod
   def init_app(app):
     pass

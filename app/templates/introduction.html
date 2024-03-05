@@ -3,14 +3,14 @@
   <div class="container">
     <div class="shadow card">
       <div class="card-body">
-        <p class="mb-3 h1">Instruções</p>
-        <p>O <strong>Opinion Score (MOS)</strong> é a mais conhecida medida da qualidade de voz.
+        <p class="mb-3 h1">{{_(Instruções)}}</p>
+        <p>{{_('O <strong>Opinion Score (MOS)</strong> é a mais conhecida medida da qualidade de voz.
           É um método subjetivo de teste de qualidade. O Objetivo é avaliar a qualidade do
           áudio seguindo os critérios de compreensão do que está sendo falado e a
-          presença de ruídos, que irritam/dificultam a compreensão da fala.</p>
+          presença de ruídos, que irritam/dificultam a compreensão da fala.')}}</p>
         <p>
-          Você como avaliador deve dar uma nota para cada áudio, as notas variam
-          de 1 a 5, como pode ser observado na tabela abaixo:
+          {{_('Você como avaliador deve dar uma nota para cada áudio, as notas variam
+          de 1 a 5, como pode ser observado na tabela abaixo:')}}
         </p>
 
         <div class="container">
@@ -19,40 +19,40 @@
               <table class="shadow-sm table table-bordered bg-white">
                 <thead>
                   <tr>
-                    <th style="text-align:center">Avaliação</th>
-                    <th style="text-align:center">Qualidade</th>
-                    <th>Distorção</th>
+                    <th style="text-align:center">{{_('Avaliação')}}</th>
+                    <th style="text-align:center">{{_('Qualidade')}}</th>
+                    <th>{{_('Distorção')}}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td style="text-align:center">5</td>
-                    <td>Excelente</td>
-                    <td>Imperceptível</td>
+                    <td>{{_('Excelente')}}</td>
+                    <td>{{_('Imperceptível')}}</td>
                   </tr>
 
                   <tr>
                     <td style="text-align:center">4</td>
-                    <td>Boa</td>
-                    <td>Apenas perceptível, mas não irritante</td>
+                    <td>{{_('Boa')}}</td>
+                    <td>{{_('Apenas perceptível, mas não irritante')}}</td>
                   </tr>
 
                   <tr>
                     <td style="text-align:center">3</td>
-                    <td>Razoável</td>
-                    <td>Perceptível e ligeiramente irritante</td>
+                    <td>{{_('Razoável')}}</td>
+                    <td>{{_('Perceptível e ligeiramente irritante')}}</td>
                   </tr>
 
                   <tr>
                     <td style="text-align:center">2</td>
-                    <td>Pobre</td>
-                    <td>Irritante, mas não inutilizável</td>
+                    <td>{{_('Pobre')}}</td>
+                    <td>{{_('Irritante, mas não inutilizável')}}</td>
                   </tr>
 
                   <tr>
                     <td style="text-align:center">1</td>
-                    <td>Ruim</td>
-                    <td>Muito irritante e inutilizável</td>
+                    <td>{{_('Ruim')}}</td>
+                    <td>{{_('Muito irritante e inutilizável')}}</td>
                   </tr>
 
                 </tbody>
@@ -63,33 +63,33 @@
 
         <ul>
           <li>
-            A nota 1 (Ruim) deve ser dada quando o som possuir um alto
+            {{_('A nota 1 (Ruim) deve ser dada quando o som possuir um alto
             nível de distorção, sendo muito irritante e não seja possível compreender o que
-            está sendo falado.
+            está sendo falado.')}}
           </li>
 
           <li>
-            A nota 2 (Pobre) deve ser dado a um áudio quando a
-            distorção é irritante mas é possível entender o que está sendo falado.
+            {{_('A nota 2 (Pobre) deve ser dado a um áudio quando a
+            distorção é irritante mas é possível entender o que está sendo falado.')}}
           </li>
 
           <li>
-            A nota 3 (Razoável) deve ser atribuída a um áudio quando a distorção do sinal é
-            perceptível e ligeiramente irritante.
+            {{_('A nota 3 (Razoável) deve ser atribuída a um áudio quando a distorção do sinal é
+            perceptível e ligeiramente irritante.')}}
           </li>
 
           <li>
-            A nota 4 (Boa) deve ser atribuída a um
-            áudio onde a distorção é perceptível porém não é irritante.
+            {{_('A nota 4 (Boa) deve ser atribuída a um
+            áudio onde a distorção é perceptível porém não é irritante.')}}
           </li>
 
           <li>
-             A nota 5 (Excelente) deve ser atribuída para um áudio onde a distorção/ruído é imperceptível.
+            {{_('A nota 5 (Excelente) deve ser atribuída para um áudio onde a distorção/ruído é imperceptível.')}}
           </li>
         </ul>
 
         <div class="p-3 text-center">
-          <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">Comece a avaliar</a>
+          <a href="{{ url_for('main.hello') }}" class="btn btn-outline-primary">{{_('Comece a avaliar')}}</a>
         </div>
       </div>
     </div>

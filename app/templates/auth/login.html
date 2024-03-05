@@ -4,7 +4,7 @@
   <div class="row justify-content-md-center">
     <div class="col-md-4">
       <div class="shadow card card-form">
-        <div class="card-header text-center h3">Log In</div>
+        <div class="card-header text-center h3">{{_('Log In')}}</div>
         <div class="card-body">
           <form method="POST">
             {{ form.hidden_tag() }}
@@ -31,8 +31,8 @@
             </fieldset>
           </form>
         </div>
-        <p class="text-center">Não tem uma conta? <a href="{{url_for('auth.signup')}}" class="link-primary">Cadastre-se</a></p>
-        <p class="text-center">Ou realize um <a href="{{url_for('auth.fast_signup')}}" class="link-primary">Cadastro Rápido</a></p>
+        <p class="text-center">{{_('Não tem uma conta?')}} <a href="{{url_for('auth.signup')}}" class="link-primary">{{_('Cadastre-se')}}</a></p>
+        <p class="text-center">{{_('Ou realize um')}} <a href="{{url_for('auth.fast_signup')}}" class="link-primary">{{_('Cadastro Rápido')}}</a></p>
       </div>
     </div>
   </div>

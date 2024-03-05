@@ -11,6 +11,7 @@ dnspython==2.2.1
 dominate==2.6.0
 email-validator==1.2.0
 Flask==2.1.1
+flask-babel==4.0.0
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.6.0
 Flask-Migrate==3.1.0

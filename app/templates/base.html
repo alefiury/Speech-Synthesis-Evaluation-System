@@ -31,14 +31,14 @@
       })
     </script>
 
-    <title>Avaliação de Qualidade</title>
+    <title>{{_('Avaliação de Qualidade')}}</title>
   </head>
 
   <body>
     <nav class="shadow navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
         <!-- Navbar Brand -->
-        <a class="navbar-brand" href="#">Avaliação</a>
+        <a class="navbar-brand" href="#">{{_('Avaliação')}}</a>
         {% if current_user.is_authenticated %}
           <!-- Navbar collapse button -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,11 +47,11 @@
           <!-- Navbar right side -->
           <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav me-auto">
-              <li class="nav-item"><a class="nav-link" href="{{ url_for('main.hello') }}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ url_for('main.introduction') }}">Instruções</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('main.hello') }}">{{_('Home')}}</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('main.introduction') }}">{{_('Instruções')}}</a></li>
             </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.change_password') }}">Alterar Senha</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.change_password') }}">{{_('Alterar Senha')}}</a></li>
               <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a></li>
             </ul>
           </div>
