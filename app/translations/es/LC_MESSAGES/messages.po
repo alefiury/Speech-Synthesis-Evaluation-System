@@ -1,0 +1,456 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-05 01:32-0300\n"
+"PO-Revision-Date: 2024-03-05 09:25-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/auth/forms.py:11 app/auth/forms.py:13
+msgid "Seu Email"
+msgstr "Su Email"
+
+#: app/auth/forms.py:16 app/auth/forms.py:17
+msgid "Sua Senha"
+msgstr "Su Contraseña"
+
+#: app/auth/forms.py:20
+msgid "Lembre-se de mim"
+msgstr "Recuérdame"
+
+#: app/auth/forms.py:21
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: app/auth/forms.py:26
+msgid "Email:"
+msgstr "Email:"
+
+#: app/auth/forms.py:33
+msgid "Email"
+msgstr "Email"
+
+#: app/auth/forms.py:38
+msgid "Nome:"
+msgstr "Nombre:"
+
+#: app/auth/forms.py:41
+msgid "Nome"
+msgstr "Nombre"
+
+#: app/auth/forms.py:46
+msgid "Senha:"
+msgstr "Contraseña:"
+
+#: app/auth/forms.py:47
+msgid "Senha"
+msgstr "Contraseña"
+
+#: app/auth/forms.py:52 app/auth/forms.py:92
+msgid "Senhas diferentes"
+msgstr "Contraseñas distintas"
+
+#: app/auth/forms.py:57
+msgid "Repita a Senha:"
+msgstr "Repita la Contraseña:"
+
+#: app/auth/forms.py:58
+msgid "Repita a Senha"
+msgstr "Repita la Contraseña"
+
+#: app/auth/forms.py:64 app/auth/forms.py:77
+msgid "Cadastrar"
+msgstr "Registrarse"
+
+#: app/auth/forms.py:68
+msgid "O email já existe."
+msgstr "El email ya existe."
+
+#: app/auth/forms.py:72
+msgid "O nome de usuário já existe."
+msgstr "El nombre de usuario ya existe."
+
+#: app/auth/forms.py:81
+msgid "Senha Atual:"
+msgstr "Contraseña Actual:"
+
+#: app/auth/forms.py:82
+msgid "Senha Atual"
+msgstr "Contraseña Actual"
+
+#: app/auth/forms.py:86
+msgid "Nova Senha:"
+msgstr "Nueva Contraseña:"
+
+#: app/auth/forms.py:87
+msgid "Nova Senha"
+msgstr "Nueva Contraseña"
+
+#: app/auth/forms.py:97
+msgid "Repita a nova senha:"
+msgstr "Repita la nueva contraseña:"
+
+#: app/auth/forms.py:98
+msgid "Repita a Nova Senha"
+msgstr "Repita la Nueva Contraseña"
+
+#: app/auth/forms.py:102 app/templates/auth/change_password.html:6
+#: app/templates/base.html:54
+msgid "Alterar Senha"
+msgstr "Cambiar Contraseña"
+
+#: app/auth/views.py:33
+msgid "Email ou senha incorreta."
+msgstr "Email o contraseña incorrecta."
+
+#: app/auth/views.py:52
+msgid " cadastrado com sucesso!"
+msgstr " registrado con éxito!"
+
+#: app/auth/views.py:78
+msgid "Cadastrado rápido criado com sucesso!"
+msgstr "Registro rápido creado con éxito!"
+
+#: app/auth/views.py:79
+msgid "Email: "
+msgstr "Email: "
+
+#: app/auth/views.py:80
+msgid "Senha: "
+msgstr "Contraseña: "
+
+#: app/auth/views.py:112
+msgid "Senha alterada com sucesso!"
+msgstr "Contraseña cambiada con éxito!"
+
+#: app/auth/views.py:115
+msgid "Senha atual incorreta"
+msgstr "Contraseña actual incorrecta"
+
+#: app/main/forms.py:8 app/templates/base.html:41 app/templates/home.html:11
+#: app/templates/introduction.html:22
+msgid "Avaliação"
+msgstr "Evaluación"
+
+#: app/main/forms.py:9
+msgid "Próximo"
+msgstr "Siguiente"
+
+#: app/main/forms.py:12
+msgid "Anterior"
+msgstr "Anterior"
+
+#: app/main/views.py:73
+msgid "Votação concluida com sucesso"
+msgstr "Votación completada con éxito"
+
+#: app/templates/base.html:34
+msgid "Avaliação de Qualidade"
+msgstr "Evaluación de Calidad"
+
+#: app/templates/base.html:50
+msgid "Home"
+msgstr "Inicio"
+
+#: app/templates/base.html:51
+msgid "Instruções"
+msgstr "Instrucciones"
+
+#: app/templates/base.html:55
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: app/templates/home.html:12 app/templates/introduction.html:23
+msgid "Qualidade"
+msgstr "Calidad"
+
+#: app/templates/home.html:13 app/templates/introduction.html:24
+msgid "Distorção"
+msgstr "Distorsión"
+
+#: app/templates/home.html:19 app/templates/introduction.html:30
+msgid "Excelente"
+msgstr "Excelente"
+
+#: app/templates/home.html:20 app/templates/introduction.html:31
+msgid "Imperceptível"
+msgstr "Imperceptible"
+
+#: app/templates/home.html:25 app/templates/introduction.html:36
+msgid "Boa"
+msgstr "Buena"
+
+#: app/templates/home.html:26 app/templates/introduction.html:37
+msgid "Apenas perceptível, mas não irritante"
+msgstr "Solo perceptible, pero no irritante"
+
+#: app/templates/home.html:31 app/templates/introduction.html:42
+msgid "Razoável"
+msgstr "Razonable"
+
+#: app/templates/home.html:32 app/templates/introduction.html:43
+msgid "Perceptível e ligeiramente irritante"
+msgstr "Perceptible y ligeramente irritante"
+
+#: app/templates/home.html:37 app/templates/introduction.html:48
+msgid "Pobre"
+msgstr "Pobre"
+
+#: app/templates/home.html:38 app/templates/introduction.html:49
+msgid "Irritante, mas não inutilizável"
+msgstr "Irritante, pero no inutilizable"
+
+#: app/templates/home.html:43 app/templates/introduction.html:54
+msgid "Ruim"
+msgstr "Malo"
+
+#: app/templates/home.html:44 app/templates/introduction.html:55
+msgid "Muito irritante e inutilizável"
+msgstr "Muy irritante e inutilizable"
+
+#: app/templates/home.html:56
+msgid "Amostra"
+msgstr "Muestra"
+
+#: app/templates/home.html:56
+msgid "de"
+msgstr "de"
+
+#: app/templates/home.html:96
+msgid "Não há mais amostras a serem avaliadas. Agradecemos a sua participação!"
+msgstr "No hay más muestras para evaluar. ¡Agradecemos su participación!"
+
+#: app/templates/introduction.html:7
+msgid ""
+"O <strong>Opinion Score (MOS)</strong> é a mais conhecida medida da "
+"qualidade de voz.\n"
+"          É um método subjetivo de teste de qualidade. O Objetivo é "
+"avaliar a qualidade do\n"
+"          áudio seguindo os critérios de compreensão do que está sendo "
+"falado e a\n"
+"          presença de ruídos, que irritam/dificultam a compreensão da "
+"fala."
+msgstr ""
+"El <strong>Puntaje de Opinión (MOS)</strong> es la medida más conocida de "
+"la calidad de la voz.\n"
+"          Es un método subjetivo de prueba de calidad. El objetivo es "
+"evaluar la calidad del\n"
+"          audio siguiendo los criterios de comprensión de lo que se está "
+"diciendo y la\n"
+"          presencia de ruidos, que irritan/dificultan la comprensión del "
+"habla."
+
+#: app/templates/introduction.html:12
+msgid ""
+"Você como avaliador deve dar uma nota para cada áudio, as notas variam\n"
+"          de 1 a 5, como pode ser observado na tabela abaixo:"
+msgstr ""
+"Usted como evaluador debe dar una nota para cada audio, las notas varían\n"
+"          de 1 a 5, como se puede observar en la tabla a continuación:"
+
+#: app/templates/introduction.html:66
+msgid ""
+"A nota 1 (Ruim) deve ser dada quando o som possuir um alto\n"
+"            nível de distorção, sendo muito irritante e não seja possível"
+" compreender o que\n"
+"            está sendo falado."
+msgstr ""
+"La nota 1 (Malo) debe darse cuando el sonido tenga un alto\n"
+"            nivel de distorsión, siendo muy irritante y no sea posible "
+"comprender lo que\n"
+"            se está diciendo."
+
+#: app/templates/introduction.html:72
+msgid ""
+"A nota 2 (Pobre) deve ser dado a um áudio quando a\n"
+"            distorção é irritante mas é possível entender o que está "
+"sendo falado."
+msgstr ""
+"La nota 2 (Pobre) debe darse a un audio cuando la\n"
+"            distorsión es irritante pero es posible entender lo que se "
+"está diciendo."
+
+#: app/templates/introduction.html:77
+msgid ""
+"A nota 3 (Razoável) deve ser atribuída a um áudio quando a distorção do "
+"sinal é\n"
+"            perceptível e ligeiramente irritante."
+msgstr ""
+"La nota 3 (Razonable) debe asignarse a un audio cuando la distorsión de la"
+" señal es\n"
+"            perceptible y ligeramente irritante."
+
+#: app/templates/introduction.html:82
+msgid ""
+"A nota 4 (Boa) deve ser atribuída a um\n"
+"            áudio onde a distorção é perceptível porém não é irritante."
+msgstr ""
+"La nota 4 (Buena) debe asignarse a un\n"
+"            audio donde la distorsión es perceptible pero no es irritante."
+
+#: app/templates/introduction.html:87
+msgid ""
+"A nota 5 (Excelente) deve ser atribuída para um áudio onde a "
+"distorção/ruído é imperceptível."
+msgstr ""
+"La nota 5 (Excelente) debe asignarse a un audio donde la "
+"distorsión/ruido es imperceptible."
+
+#: app/templates/introduction.html:92
+msgid "Comece a avaliar"
+msgstr "Comience a evaluar"
+
+#: app/templates/sound_test.html:5
+msgid "Volume"
+msgstr "Volumen"
+
+#: app/templates/sound_test.html:6
+msgid ""
+"Reproduza o áudio abaixo para testar o seu volume. Avance quando estiver "
+"satisfeito."
+msgstr ""
+"Reproduzca el audio a continuación para probar su volumen. Avance cuando "
+"esté satisfecho."
+
+#: app/templates/sound_test.html:14
+msgid "Avançar"
+msgstr "Avanzar"
+
+#: app/templates/auth/fast_signup.html:6 app/templates/auth/login.html:35
+msgid "Cadastro Rápido"
+msgstr "Registro Rápido"
+
+#: app/templates/auth/fast_signup.html:14 app/templates/auth/signup.html:62
+msgid "Eu concordo com os"
+msgstr "Estoy de acuerdo con los"
+
+#: app/templates/auth/fast_signup.html:14 app/templates/auth/signup.html:62
+#: app/templates/auth/terms.html:5
+msgid "Termos e Condições"
+msgstr "Términos y Condiciones"
+
+#: app/templates/auth/fast_signup.html:22
+#: app/templates/auth/finished_fast_signup.html:12
+#: app/templates/auth/signup.html:70
+msgid "Já tem uma conta?"
+msgstr "¿Ya tiene una cuenta?"
+
+#: app/templates/auth/fast_signup.html:22
+#: app/templates/auth/finished_fast_signup.html:12
+#: app/templates/auth/login.html:7 app/templates/auth/signup.html:70
+msgid "Log In"
+msgstr "Iniciar sesión"
+
+#: app/templates/auth/finished_fast_signup.html:6
+msgid "Seu Cadastro Rápido"
+msgstr "Su Registro Rápido"
+
+#: app/templates/auth/login.html:34
+msgid "Não tem uma conta?"
+msgstr "¿No tiene una cuenta?"
+
+#: app/templates/auth/login.html:34
+msgid "Cadastre-se"
+msgstr "Regístrese"
+
+#: app/templates/auth/login.html:35
+msgid "Ou realize um"
+msgstr "O realice un"
+
+#: app/templates/auth/signup.html:6
+msgid "Cadastro de Usuário"
+msgstr "Registro de Usuario"
+
+#: app/templates/auth/terms.html:10
+msgid "Informações ao Participante"
+msgstr "Información para el Participante"
+
+#: app/templates/auth/terms.html:11
+msgid "1. Objetivos"
+msgstr "1. Objetivos"
+
+#: app/templates/auth/terms.html:13
+msgid ""
+"Esta aplicaçõa <i>web</i> visa armazenar dados de opinião dos "
+"participantes\n"
+"            a partir de uma votação embasada na característica subjetiva "
+"de qualidade auditiva. O Objetivo\n"
+"            é que a partir de uma quantidade consideravel de votações, "
+"seja possível o cálculo de estatísticas, de modo\n"
+"            agregado, que auxiliarão na avaliação de sistemas de síntese "
+"de fala."
+msgstr ""
+"Esta aplicación <i>web</i> tiene como objetivo almacenar datos de opinión "
+"de los participantes\n"
+"            a partir de una votación basada en la característica subjetiva"
+" de calidad auditiva. El objetivo\n"
+"            es que a partir de una cantidad considerable de votaciones, "
+"sea posible el cálculo de estadísticas, de manera\n"
+"            agregada, que ayudarán en la evaluación de sistemas de síntesis"
+" de voz."
+
+#: app/templates/auth/terms.html:19
+msgid "2. Confidencialidade"
+msgstr "2. Confidencialidad"
+
+#: app/templates/auth/terms.html:21
+msgid ""
+"Informamos aos senhores participantes que os dados pessoais fornecidos no"
+" cadastro, como nome e email,\n"
+"            não serão utilizados de nenhuma forma e somente servirão como"
+" identificadores únicos para melhorar a experiência de usuário\n"
+"            e mitigar a possibilidade de que um mesmo participante avalie"
+" as amostras mais de uma vez."
+msgstr ""
+"Informamos a los señores participantes que los datos personales "
+"proporcionados en el registro, como nombre y email,\n"
+"            no serán utilizados de ninguna forma y solo servirán como "
+"identificadores únicos para mejorar la experiencia del usuario\n"
+"            y mitigar la posibilidad de que un mismo participante evalúe "
+"las muestras más de una vez."
+
+#: app/templates/auth/terms.html:26
+msgid "Consentimento"
+msgstr "Consentimiento"
+
+#: app/templates/auth/terms.html:28
+msgid ""
+"Eu declaro ter conhecimento das informações contidas neste documento e, "
+"adicionalmente, declaro ter compreendido o objetivo e a confidencialidade"
+"\n"
+"          relacionadas a essa aplicação. Após reflexão e um tempo "
+"razoável, eu decidi, livre e voluntariamente, participar dessa avaliação,"
+" permitindo que\n"
+"          meus dados sejam utilizados para fins de pesquisa "
+"cientifica/educacional. Concordo que o material e as informaçãoes obtidas"
+"\n"
+"          relacionadas a minha pessoa possam ser publicados em aulas, "
+"congressos, eventos científicos, palestras ou periódicos científicos. "
+"Porém, não devo ser\n"
+"          identificado por nome ou qualquer outra forma."
+msgstr ""
+"Declaro tener conocimiento de la información contenida en este documento y,"
+" adicionalmente, declaro haber comprendido el objetivo y la confidencialidad"
+"\n"
+"          relacionadas con esta aplicación. Tras reflexionar y un tiempo "
+"razonable, decidí, libre y voluntariamente, participar en esta evaluación, "
+"permitiendo que\n"
+"          mis datos sean utilizados para fines de investigación "
+"científica/educacional. Acepto que el material y la información obtenida"
+"\n"
+"          relacionada con mi persona puedan ser publicados en clases, "
+"congresos, eventos científicos, charlas o revistas científicas. "
+"Sin embargo, no debo ser\n"
+"          identificado por nombre o de cualquier otra forma."

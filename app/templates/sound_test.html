@@ -2,8 +2,8 @@
 {% block content %}
   <div class="shadow card">
     <div class="card-body">
-      <p class="mb-3 h1">Volume</p>
-      <p>Reproduza o áudio abaixo para testar o seu volume. Avance quando estiver satisfeito.</p>
+      <p class="mb-3 h1">{{_('Volume')}}</p>
+      <p>{{_('Reproduza o áudio abaixo para testar o seu volume. Avance quando estiver satisfeito.')}}</p>
       <div class="mb-3 text-center">
         <audio controls="controls" preload="auto" id="audio_player">
           <source src="{{s3_client.generate_presigned_url('get_object', Params={'Bucket': os.environ.get('S3_BUCKET_SOUND_TEST'), 'Key': os.environ.get('S3_KEY_SOUND_TEST')}, ExpiresIn=3600)}}">
@@ -11,7 +11,7 @@
       </div>
 
       <div class="p-3 text-center">
-        <a href="{{ url_for('main.introduction') }}" class="btn btn-outline-primary">Avançar</a>
+        <a href="{{ url_for('main.introduction') }}" class="btn btn-outline-primary">{{_('Avançar')}}</a>
       </div>
     </div>
   </div>
