@@ -16,18 +16,16 @@
 
 # Introduction
 
-A web application developed in flask for quality evaluation of synthesized speech in brazilian portuguese, based on Mean Opinion Score (MOS).
+This is a Flask-based web platform designed for the assessment of speech synthesis quality across various languages, leveraging the Mean Opinion Score (MOS) approach.
+
+Supporting multiple languages, including English, Spanish, and Portuguese, the platform dynamically adapts its interface to the user's browser language settings, facilitated by Flask Babel extension.
 
 # How the Application Works
 
-The evaluation takes into account 5 possible scores: Excellent, Good, Fair, Poor and Bad.
 
-Every audio sample provided will be shown one by one.
+Participants rate each speech sample using a five-point scale: Excellent, Good, Fair, Poor, and Bad, with samples presented sequentially and uniquely to each participant.
 
-When all samples are evaluated, the participant will not be able to evaluate more samples.
-
-To minimize bias during the evaluation, the audio samples are shown in a random order for each participant, and even after a logout,
-the participants will be able to continue to evaluate the samples from where they stopped.
+To ensure unbiased results, samples are randomized for every participant. Participants can resume their evaluations from where they left off, even after logging out, thanks to session continuity.
 
 ## 1. Dependencies
 
