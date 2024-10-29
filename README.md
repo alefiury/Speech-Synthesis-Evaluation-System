@@ -87,8 +87,8 @@ The pattern of the saved scores are:
 
 ```
 ├─ filename
-   ├─ participant_id
-      ├─ mos_score
+   └─ participant_id
+      └─ mos_score
 ```
 
 ### 2.3 Audio Database
