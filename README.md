@@ -20,6 +20,20 @@ This is a Flask-based web platform designed for the assessment of speech synthes
 
 Supporting multiple languages, including English, Spanish, and Portuguese, the platform dynamically adapts its interface to the user's browser language settings, facilitated by Flask Babel extension.
 
+# Application
+
+<p align="center"><img src="imgs/login.png" alt="Log in screen" width="800"/></p>
+
+<p align="center"><img src="imgs/registration.png" alt="Quick Registration screen" width="800"/></p>
+
+<p align="center"><img src="imgs/quick_registration.png" alt="Quick Registration screen" width="800"/></p>
+
+<p align="center"><img src="imgs/volume_testing.png" alt="Volume testing screen" width="800"/></p>
+
+<p align="center"><img src="imgs/instructions.png" alt="Instructions screen" width="800"/></p>
+
+<p align="center"><img src="imgs/evaluation.png" alt="Evaluation screen" width="800"/></p>
+
 # How the Application Works
 
 Participants rate each speech sample using a five-point scale: Excellent, Good, Fair, Poor, and Bad, with samples presented sequentially and uniquely to each participant.
@@ -42,13 +56,26 @@ These variables can be seen and set in the config file.
 
 The variables that need to be set are:
 
+### Application Settings
+
 - SECRET_KEY: The application’s secret key (see Section 3)
+- MAX_SAMPLES: Max number of samples for evaluation
+- FLASK_CONFIG: Application configuration ('default', 'development', 'production', or 'heroku')
+
+### AWS Configuration (Store Audios)
+
 - AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION_NAME: For AWS S3 access
 - S3_BUCKET: Name of the Bucket for data to be evaluated
 - S3_BUCKET_SOUND_TEST: Name of the Bucket for volume test audio
 - S3_KEY_SOUND_TEST: Name of the file for volume testing that is inside the Bucket sount test
-- MAX_SAMPLES: Max number of samples for evaluation
-- FLASK_CONFIG: Application configuration ('default', 'development', 'production', or 'heroku')
+
+
+### Firebase Configuration (Store MOS Scores)
+
+- FIREBASE_API_KEY: Firebase API key
+- FIREBASE_AUTH_DOMAIN: Firebase authentication domain
+- FIREBASE_DATABASE_URL: Firebase database URL
+- FIREBASE_STORAGE_BUCKET: Firebase storage bucket name
 
 ### 2.2 Score Database
 
@@ -109,20 +136,6 @@ More information on deployment using Git can be found [here](https://devcenter.h
 To use Heroku you need to add a Database add-on, I recommend using the "Heroku Postgres" because is easy to use (and cheap 😉)
 
 After adding a database you can execute the commands introduced in Section "4. User Information Database" in bash mode of the console of the application.
-
-# Application
-
-<p align="center"><img src="imgs/login.png" alt="Log in screen" width="800"/></p>
-
-<p align="center"><img src="imgs/registration.png" alt="Quick Registration screen" width="800"/></p>
-
-<p align="center"><img src="imgs/quick_registration.png" alt="Quick Registration screen" width="800"/></p>
-
-<p align="center"><img src="imgs/volume_testing.png" alt="Volume testing screen" width="800"/></p>
-
-<p align="center"><img src="imgs/instructions.png" alt="Instructions screen" width="800"/></p>
-
-<p align="center"><img src="imgs/evaluation.png" alt="Evaluation screen" width="800"/></p>
 
 ## Author
 
