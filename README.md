@@ -79,7 +79,7 @@ The variables that need to be set are:
 
 ### 2.2 Score Database
 
-The scores given by the users are saved in a RealTime Database on the Firebase platform. Is necessary that you create an account, add a new app project, get the information related to the project and set the enviroment variables that are related with the RealTime Database.
+The scores given by the users are saved in a RealTime Database on the Firebase platform. Is necessary that you create an account, add a new app project, get the information related to the project and set the enviroment variables that are related with Firebase.
 
 More information can be found [here](https://firebase.google.com).
 
