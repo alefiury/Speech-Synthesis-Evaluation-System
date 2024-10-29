@@ -79,9 +79,15 @@ The variables that need to be set are:
 
 ### 2.2 Score Database
 
-The scores given by the users are saved in a RealTime Database on the Firebase platform. Is necessary that you create an account, add a new app project, get the information related to the project and set the enviroment variables that are related with Firebase.
+The scores given by the users are saved in a RealTime Database on the Firebase platform. Is necessary that you create an account, add a new app project, get the information related to the project and set the enviroment variables that are related with Firebase. The rules of writing of the database must be public.
 
 More information can be found [here](https://firebase.google.com).
+
+The pattern of the saved scores are:
+
+├─ filename
+   ├─ participant_id
+      ├─ mos_score
 
 ### 2.3 Audio Database
 
