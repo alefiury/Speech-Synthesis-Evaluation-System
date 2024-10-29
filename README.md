@@ -85,9 +85,11 @@ More information can be found [here](https://firebase.google.com).
 
 The pattern of the saved scores are:
 
+```
 ├─ filename
    ├─ participant_id
       ├─ mos_score
+```
 
 ### 2.3 Audio Database
 
