@@ -2,7 +2,7 @@ import os
 
 from flask import request, g
 from flask_babel import Babel
-from flask_migrate import Migrate, upgrade
+from flask_migrate import Migrate
 
 from app.main import views
 from app import create_app, db
@@ -20,3 +20,11 @@ babel.init_app(app, locale_selector=get_locale)
 
 # Migrate database
 migrate = Migrate(app, db)
+
+
+@app.cli.command("init-db")
+def init_db():
+    """Create SQL tables if they do not exist."""
+    # Import models so SQLAlchemy metadata is fully registered.
+    from app import models  # noqa: F401
+    db.create_all()

@@ -112,10 +112,7 @@ python -c 'import os; print(os.urandom(24))'
 In order to create the database necessary to save the information of your users, run the following bash command:
 
 ```
-export FLASK_APP=main.py
-flask shell
-from app import db
-db.create_all()
+flask --app main.py init-db
 ```
 
 ## 5. Execute
@@ -143,7 +140,7 @@ More information on deployment using Git can be found [here](https://devcenter.h
 
 To use Heroku you need to add a Database add-on, I recommend using the "Heroku Postgres" because is easy to use (and cheap 😉)
 
-After adding a database you can execute the commands introduced in Section "4. User Information Database" in bash mode of the console of the application.
+After adding a database, deploy the app normally: the `release` process in `Procfile` runs `flask --app main.py init-db` automatically, so you do not need to open Heroku bash and run manual `flask shell` commands.
 
 ## Author
 
